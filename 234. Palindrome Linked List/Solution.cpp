@@ -8,6 +8,13 @@
  */
 class Solution {
 public:
+    /**
+     * NOTE:
+     * This approach is not appropriate in real world
+     * situation since it just modified the input
+     * without restoring the input. But due to current
+     * situation, I'm not going to restore it. :P
+     */
     bool isPalindrome(ListNode* head) {
         if (!head || !head->next) return true;
         ListNode *p = head, *q = head->next, *tmp, *l = nullptr;
