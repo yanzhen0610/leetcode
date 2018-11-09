@@ -12,7 +12,6 @@ public:
         auto start = it;
         
         while (isdigit(*it) && (it - start <= 10)) ++it;
-        if (it == start) return 0;
         
         while (start != it)
         {
