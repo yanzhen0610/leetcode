@@ -19,10 +19,13 @@ public:
             result = result * 10 + (*start - '0');
             ++start;
         }
-        if (neg) result = -result;
-        
-        if (result > INT_MAX) return INT_MAX;
-        else if (result < INT_MIN) return INT_MIN;
+
+        if (neg)
+        {
+            result = -result;
+            if (result < INT_MIN) return INT_MIN;
+        }
+        else if (result > INT_MAX) return INT_MAX;
         
         return result;
     }
