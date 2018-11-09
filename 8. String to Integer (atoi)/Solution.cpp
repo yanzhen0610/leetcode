@@ -1,7 +1,7 @@
 class Solution {
 public:
     int myAtoi(string str) {
-        auto it = str.c_str();
+        auto it = str.c_str(); // less overhead
         bool neg = false;
         long long result = 0;
         
