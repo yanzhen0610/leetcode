@@ -51,4 +51,4 @@ public:
 };
 ```
 
-The I/O synchronization is the main problem that makes the C++ is slower than most of others languages.
+The I/O synchronization is the main problem that makes C++ slower than most of others languages.
