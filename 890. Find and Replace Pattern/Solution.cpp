@@ -2,12 +2,12 @@ class Solution {
 public:
     string generalize_pattern(string str)
     {
-        map<char, char> m;
-        char ch = 'a';
+        char ch = 'a', t, m[26]{};
         for (auto& c : str)
         {
-            if (m.find(c) == m.end()) m[c] = ch++;
-            c = m[c];
+            t = c - 'a';
+            if (!m[t]) m[t] = ch++;
+            c = m[t];
         }
         return str;
     }
