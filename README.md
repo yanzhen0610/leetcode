@@ -7,7 +7,7 @@ This repo is a backup of my solutions on LeetCode online judge. And the solution
 In order to reduce the C++ I/O synchronization overhead, please add the following code to the very first line in your solution. The following code will reduce the runtime significantly. (Depending on the problems, it's a significant improve in most problems.)
 
 ```C++
-static const auto speedup = []() { std::ios::sync_with_stdio(false); std::cin.tie(nullptr); return 0; }();
+static const auto disable_cpp_iostream_sync = []() { std::ios::sync_with_stdio(false); std::cin.tie(nullptr); return 0; }();
 ```
 
 For example, the original solution is like
@@ -33,7 +33,7 @@ public:
 then add the code to the very first line
 
 ```C++
-static const auto speedup = []() { std::ios::sync_with_stdio(false); std::cin.tie(nullptr); return 0; }();
+static const auto disable_cpp_iostream_sync = []() { std::ios::sync_with_stdio(false); std::cin.tie(nullptr); return 0; }();
 class Solution {
 public:
     string shiftingLetters(string S, vector<int>& shifts) {
