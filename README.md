@@ -1,6 +1,6 @@
 # About
 
-This repo is a backup of my solutions on LeetCode online judge. And the solutions are mainly written in C++.
+This repo is a backup of my solutions on LeetCode online judge. And the solutions are mainly written in C/C++.
 
 ## Make C++ less overhead
 
