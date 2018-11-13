@@ -11,7 +11,7 @@ class Solution {
 public:
     int maxPoints(vector<Point>& points) {
         int x, y, overlap, max = 0, tmp, result = 0;
-        map<int, map<int, int>> m;
+        unordered_map<uint64_t, int> m;
         for (auto i = points.begin(); i < points.end(); ++i)
         {
             m.clear();
@@ -31,7 +31,7 @@ public:
                     x /= tmp;
                     y /= tmp;
                 }
-                tmp = m[x][y] += 1;
+                tmp = m[((uint64_t) x) << 32 | y] += 1;
                 if (tmp > max) max = tmp;
             }
             if ((tmp = max + overlap + 1) > result) result = tmp;
