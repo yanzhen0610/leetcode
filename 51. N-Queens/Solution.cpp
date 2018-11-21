@@ -23,7 +23,7 @@ public:
             }
         }
     }
-    bool safe(int n, int q, int i, int* cb)
+    bool safe(int n, int q, int i, const int* cb)
     {
         int j, k;
         for (j = q - 1, k = i - 1; j > 0 and k >= 0; --j, --k)
@@ -32,7 +32,7 @@ public:
             if (cb[k] == j) return false;
         return true;
     }
-    void add(int n, int* cb, vector<vector<string>>& result)
+    void add(int n, const int* cb, vector<vector<string>>& result)
     {
         vector<string> chessboard = make_chessboard(n);
         for (int i = 0; i < n; ++i)
