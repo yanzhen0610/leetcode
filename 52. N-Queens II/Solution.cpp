@@ -1,11 +1,11 @@
 class Solution {
 public:
-    Solution() : diagonal1(new bool[128] + 64), diagonal2(new bool[128] + 64), column(new bool[128] + 64)
+    Solution() : diagonal1(new bool[32] + 16), diagonal2(new bool[32] + 16), column(new bool[32] + 16)
     {
-        for (int i = -64; i < 64; ++i)
+        for (int i = -16; i < 16; ++i)
             diagonal1[i] = false, diagonal2[i] = false, column[i] = false;
     }
-    ~Solution() { delete[] (diagonal1 - 64), (diagonal2 - 64), (column - 64); }
+    ~Solution() { delete[] (diagonal1 - 16), (diagonal2 - 16), (column - 16); }
     int totalNQueens(int n) { return nq(0, n); }
 private:
     int nq(int row, int n)
